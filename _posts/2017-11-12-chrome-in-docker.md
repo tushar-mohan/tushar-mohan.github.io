@@ -14,7 +14,7 @@ To build the docker chrome image, you can use the following `Dockerfile`.
 You might be able to use a leaner image such as `debian`, although I base mine 
 off `ubuntu`.
 
-```
+```docker
 FROM ubuntu
 RUN apt-get update && \
 apt-get install -y wget \
@@ -27,7 +27,7 @@ dpkg -i google-chrome*.deb
 
 We then build and run the image in a container where we bind mount the X server socket:
 
-```
+```sh
 $ docker build -t chrome .
 $ docker run --rm -d -e DISPLAY=:0 -v /tmp/.X11-unix:/tmp/.X11-unix chrome google-chrome --no-sandbox --disable-gpu
 ```
