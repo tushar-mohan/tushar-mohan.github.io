@@ -17,7 +17,6 @@ but you might want to skim the code below for a high-level understanding.
 Here is the relevant Python function with the Flask route decorator:
 
 ```
-@app.route('/wiki/')
 @app.route('/wiki/)
 def wikiproxy(p = ''):
     import requests
