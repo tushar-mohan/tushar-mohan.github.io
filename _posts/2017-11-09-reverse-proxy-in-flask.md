@@ -1,3 +1,8 @@
+---
+layout: post
+title: Reverse Proxy in Flask
+---
+
 Sometimes one wants to present external pages as part of one’s own website. 
 For example, I have a wiki on a third-party site that I want to navigate to 
 when a user clicks on the “Wiki” link on my website. The catch is that 
